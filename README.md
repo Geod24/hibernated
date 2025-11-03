@@ -186,10 +186,11 @@ CREATE TABLE invoices (
     amount_e4 INTEGER);
 ALTER TABLE invoices
     ADD CONSTRAINT invoices_pkey PRIMARY KEY (vendor_no, invoice_no);
+
 ```
 
 To represent this using HibernateD, the following code would be used:
-```
+```D
 @Embeddable
 class InvoiceId {
     string vendorNo;
